@@ -2,7 +2,7 @@
 /**
  * Post Hierarchical Column class for displaying parent selector in admin columns.
  *
- * @version 1.0
+ * @version 1.1
  */
 class post_hierarchical_column {
 
@@ -54,6 +54,7 @@ class post_hierarchical_column {
 	 */
 	public function load() {
 		global $typenow;
+/*
 		if ( is_numeric( $_GET['parent_selector'] ) && intval( $_GET['parent_selector'] ) > 0 ) {
 			add_action( 'admin_print_footer_scripts', function() {
 				?>
@@ -63,6 +64,7 @@ class post_hierarchical_column {
 				<?php
 			} );
 		}
+*/
 		add_action( 'restrict_manage_posts', array( $this, 'parentSelector' ) );
 	}
 
